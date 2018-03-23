@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Android Basics</string>
+    <string name="app_title">Pizza Asker</string>
+    <string name="email">Email</string>
+    <string name="hint_email">seu email aqui</string>
+    <string name="password">Senha</string>
+    <string name="forgot_password">Esqueceu sua senha?</string>
+    <string name="hint_password">sua senha aqui</string>
+    <string name="login">Entrar</string>
+    <string name="register_1">Não tem cadastro?</string>
+    <string name="register_2">Pressione aqui!</string>
 </resources>
