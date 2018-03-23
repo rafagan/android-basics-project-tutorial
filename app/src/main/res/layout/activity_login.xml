@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txt_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pizza Asker"
+        android:textSize="40sp"
+        android:textColor="#92aebf"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="142dp" />
+
+    <TextView
+        android:id="@+id/txt_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_logo"
+        android:text="Email"
+        android:textSize="10sp"
+        android:textColor="#92aebf"
+        android:layout_marginTop="78dp"
+        android:layout_alignStart="@id/txt_user_login"
+        android:layout_alignLeft="@id/txt_user_login"/>
+
+    <!--android:background="@drawable/shape_input_round"-->
+    <EditText
+        android:id="@+id/txt_user_login"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:inputType="textEmailAddress"
+        android:textColor="#393939"
+        android:textColorHint="#92aebf"
+        android:textSize="13sp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:imeOptions="actionNext"
+        android:layout_below="@+id/txt_user"
+        android:hint="seu email aqui" />
+
+</RelativeLayout>
