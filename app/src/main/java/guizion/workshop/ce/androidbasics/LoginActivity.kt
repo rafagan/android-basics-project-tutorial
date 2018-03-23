@@ -16,4 +16,19 @@ class LoginActivity: AppCompatActivity() {
         val myIntent = Intent(this, PasswordRecoveryActivity::class.java)
         startActivity(myIntent)
     }
+
+    fun login(view: View) {
+        //todo: efetuar login no servidor
+        this.navigateToHome()
+    }
+
+    fun navigateToHome() {
+        val myIntent = Intent(this, MainActivity::class.java)
+        startActivity(myIntent)
+    }
+
+    fun navigateToRegistration(view: View) {
+        val myIntent = Intent(this, RegisterActivity::class.java)
+        startActivity(myIntent)
+    }
 }
