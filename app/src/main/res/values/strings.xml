@@ -9,4 +9,6 @@
     <string name="login">Entrar</string>
     <string name="register_1">Não tem cadastro?</string>
     <string name="register_2">Pressione aqui!</string>
+    <string name="password_recover_title">Recuperação de senha</string>
+    <string name="recover">Recuperar</string>
 </resources>
