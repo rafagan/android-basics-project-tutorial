@@ -24,6 +24,7 @@ class LoginActivity: AppCompatActivity() {
 
     fun navigateToHome() {
         val myIntent = Intent(this, MainActivity::class.java)
+        myIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(myIntent)
     }
 

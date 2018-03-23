@@ -18,7 +18,7 @@ class PasswordRecoveryActivity : AppCompatActivity() {
 
     fun navigateToLogin() {
         val myIntent = Intent(this, LoginActivity::class.java)
-        myIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        myIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(myIntent)
     }
 }

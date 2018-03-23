@@ -7,22 +7,52 @@
         android:id="@+id/txt_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/app_title"
-        android:textSize="40sp"
+        android:text="@string/register"
+        android:textSize="23sp"
         android:textColor="@color/gray"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp" />
 
     <TextView
-        android:id="@+id/txt_user"
+        android:id="@+id/txt_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txt_logo"
-        android:text="@string/email"
+        android:text="@string/full_name"
         android:textSize="@dimen/label_font_size"
         android:textColor="@color/gray"
         android:layout_marginTop="78dp"
+        android:layout_alignStart="@id/txt_name_value"
+        android:layout_alignLeft="@id/txt_name_value"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/txt_name_value"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:inputType="textCapWords"
+        android:textColor="#393939"
+        android:textColorHint="@color/gray"
+        android:textSize="13sp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginRight="37dp"
+        android:imeOptions="actionNext"
+        android:layout_below="@+id/txt_name"
+        android:background="@drawable/shape_input_round" />
+
+    <TextView
+        android:id="@+id/txt_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_name_value"
+        android:text="@string/email"
+        android:textSize="@dimen/label_font_size"
+        android:textColor="@color/gray"
+        android:layout_marginTop="15dp"
         android:layout_alignStart="@id/txt_user_login"
         android:layout_alignLeft="@id/txt_user_login"
         android:textStyle="bold" />
@@ -42,7 +72,6 @@
         android:layout_marginRight="37dp"
         android:imeOptions="actionNext"
         android:layout_below="@+id/txt_user"
-        android:hint="@string/hint_email"
         android:background="@drawable/shape_input_round" />
 
     <TextView
@@ -54,27 +83,12 @@
         android:textSize="@dimen/label_font_size"
         android:textColor="@color/gray"
         android:layout_marginTop="15dp"
-        android:layout_alignStart="@+id/txt_password_login"
-        android:layout_alignLeft="@+id/txt_password_login"
+        android:layout_alignStart="@+id/txt_password2"
+        android:layout_alignLeft="@+id/txt_password2"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/txt_recover_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txt_user_login"
-        android:text="@string/forgot_password"
-        android:textSize="@dimen/label_font_size"
-        android:textColor="#e4366e"
-        android:layout_marginTop="15dp"
-        android:layout_alignEnd="@+id/txt_password_login"
-        android:layout_alignRight="@+id/txt_password_login"
-        android:onClick="navigateToForgotPassword"
-        android:clickable="true"
-        android:focusable="true" />
-
     <EditText
-        android:id="@+id/txt_password_login"
+        android:id="@+id/txt_password2"
         android:layout_width="match_parent"
         android:layout_height="37dp"
         android:inputType="textPassword"
@@ -89,51 +103,50 @@
         android:layout_marginLeft="37dp"
         android:layout_marginRight="37dp"
         android:layout_below="@id/txt_password"
-        android:hint="@string/hint_password"
+        android:background="@drawable/shape_input_round"/>
+
+    <TextView
+        android:id="@+id/txt_password_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_password2"
+        android:text="@string/confirm_password"
+        android:textSize="@dimen/label_font_size"
+        android:textColor="@color/gray"
+        android:layout_marginTop="15dp"
+        android:layout_alignStart="@+id/txt_password2"
+        android:layout_alignLeft="@+id/txt_password2"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/txt_password_confirm2"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:inputType="textPassword"
+        android:textSize="13sp"
+        android:textColor="#393939"
+        android:textColorHint="@color/gray"
+        android:maxLength="50"
+        android:imeOptions="actionDone"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginRight="37dp"
+        android:layout_below="@id/txt_password_confirm"
         android:background="@drawable/shape_input_round"/>
 
     <Button
         android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_below="@+id/txt_password_login"
+        android:layout_below="@+id/txt_password_confirm2"
         android:layout_marginTop="24dp"
-        android:onClick="login"
-        android:textAllCaps="false"
-        android:text="@string/login"
+        android:onClick="register"
+        android:text="@string/register"
         android:textColor="#ffffff"
         android:textSize="14sp"
         android:layout_marginLeft="37dp"
         android:layout_marginRight="37dp"
         android:background="@drawable/shape_button_login" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_login"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp">
-
-        <TextView
-            android:id="@+id/txt_register1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/register_1"
-            android:textColor="#363636"
-            android:textSize="13sp"
-            android:layout_marginEnd="3dp"
-            android:layout_marginRight="3dp" />
-
-        <TextView
-            android:id="@+id/txt_register2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/register_2"
-            android:textColor="#57b9a0"
-            android:textSize="13sp"
-            android:onClick="navigateToRegistration"
-            android:clickable="true"
-            android:focusable="true" />
-
-    </LinearLayout>
 </RelativeLayout>
