@@ -16,4 +16,8 @@
     <string name="full_name">Nome completo</string>
     <string name="menu_home">Início</string>
     <string name="menu_history">Histórico</string>
+    <string name="pizza_name">Nome da pizza</string>
+    <string name="pizza_size">Tamanho</string>
+    <string name="pizza_border">Borda</string>
+    <string name="pizza_image">Imagem da pizza</string>
 </resources>
