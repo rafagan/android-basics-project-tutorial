@@ -21,6 +21,9 @@
     <string name="pizza_border">Borda</string>
     <string name="pizza_image">Imagem da pizza</string>
     <string name="content">content</string>
+    <string name="select_pizza">Selecione a pizza</string>
+    <string name="select_size">Selecione o tamanho</string>
+    <string name="select_border">Selecione a borda</string>
 
     <string-array name="pizzas">
         <item>Margherita</item>

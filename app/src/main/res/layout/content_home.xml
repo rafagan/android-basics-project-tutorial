@@ -1,24 +1,127 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nome de pizza"
-        android:onClick="showPizzas" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:baselineAligned="false">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tamanhos"
-        android:onClick="showSizes" />
+        <ImageView
+            android:layout_gravity="left|center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="330dp"
+            android:src="@drawable/home_circle"
+            android:layout_weight="1"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bordas"
-        android:onClick="showBorders" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="end"
+            android:layout_marginTop="60dp"
+            android:layout_weight="2">
 
-</LinearLayout>
+            <TextView
+                android:id="@+id/txt_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_title"
+                android:textSize="40sp"
+                android:textColor="@color/gray"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_pizza"
+                android:onClick="showPizzas"
+                android:textSize="@dimen/home_font_small"
+                android:textColor="@color/home_font_color"
+                android:layout_marginTop="34dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Margherita"
+                android:onClick="showPizzas"
+                android:textSize="@dimen/home_font_big"
+                android:textColor="@color/home_font_color"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#eeeeee"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_size"
+                android:onClick="showPizzas"
+                android:textSize="@dimen/home_font_small"
+                android:textColor="@color/home_font_color"
+                android:layout_marginTop="19dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Grande"
+                android:onClick="showSizes"
+                android:textSize="@dimen/home_font_big"
+                android:textColor="@color/home_font_color"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#eeeeee"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_border"
+                android:onClick="showPizzas"
+                android:textSize="@dimen/home_font_small"
+                android:textColor="@color/home_font_color"
+                android:layout_marginTop="19dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Catupiri"
+                android:onClick="showBorders"
+                android:textSize="@dimen/home_font_big"
+                android:textColor="@color/home_font_color"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#eeeeee"
+                android:layout_marginTop="16dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:src="@drawable/ic_phone"
+        android:scaleType="center"
+        app:backgroundTint="#53cdae"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="68dp" />
+</FrameLayout>
