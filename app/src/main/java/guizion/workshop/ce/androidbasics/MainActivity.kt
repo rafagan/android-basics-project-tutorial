@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import android.support.design.widget.NavigationView
 import android.support.v4.widget.DrawerLayout
+import android.view.View
 
 
 class MainActivity: AppCompatActivity() {
@@ -38,5 +39,25 @@ class MainActivity: AppCompatActivity() {
         val myIntent = Intent(this, HistoryActivity::class.java)
         myIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(myIntent)
+    }
+
+    fun showPizzas(view: View) {
+        showModal(R.array.pizzas)
+    }
+
+    fun showSizes(view: View) {
+        showModal(R.array.sizes)
+    }
+
+    fun showBorders(view: View) {
+        showModal(R.array.borders)
+    }
+
+    fun showModal(type: Int) {
+        val modal = SelectModalFragment()
+        val bundle = Bundle()
+        bundle.putInt("type", type)
+        modal.arguments = bundle
+        modal.show(supportFragmentManager, null)
     }
 }

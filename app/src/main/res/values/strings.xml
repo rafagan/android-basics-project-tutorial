@@ -20,4 +20,22 @@
     <string name="pizza_size">Tamanho</string>
     <string name="pizza_border">Borda</string>
     <string name="pizza_image">Imagem da pizza</string>
+
+    <string-array name="pizzas">
+        <item>Margherita</item>
+        <item>Romeu e julieta</item>
+        <item>Milho</item>
+    </string-array>
+
+    <string-array name="sizes">
+        <item>Grande</item>
+        <item>Brotinho</item>
+        <item>Gigante</item>
+    </string-array>
+
+    <string-array name="borders">
+        <item>Catupiri</item>
+        <item>Chocolate</item>
+        <item>Sem borda</item>
+    </string-array>
 </resources>
