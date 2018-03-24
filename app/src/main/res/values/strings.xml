@@ -14,4 +14,6 @@
     <string name="register">Cadastrar</string>
     <string name="confirm_password">Confirmar senha</string>
     <string name="full_name">Nome completo</string>
+    <string name="menu_home">Início</string>
+    <string name="menu_history">Histórico</string>
 </resources>
