@@ -2,14 +2,19 @@ package guizion.workshop.ce.androidbasics
 
 import android.content.Intent
 import android.os.Bundle
+import android.support.design.widget.BottomSheetDialogFragment
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import android.support.design.widget.NavigationView
 import android.support.v4.widget.DrawerLayout
 import android.view.View
+import android.widget.TextView
 
+interface SelectInModalListener {
+    fun onSelectInModal(type: Int, value: String)
+}
 
-class MainActivity: AppCompatActivity() {
+class MainActivity: AppCompatActivity(), SelectInModalListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -58,6 +63,18 @@ class MainActivity: AppCompatActivity() {
         val bundle = Bundle()
         bundle.putInt("type", type)
         modal.arguments = bundle
-        modal.show(supportFragmentManager, null)
+        modal.show(supportFragmentManager, "selectModalFragment")
+    }
+
+    override fun onSelectInModal(type: Int, value: String) {
+        val txt: TextView? = when(type) {
+            R.array.pizzas -> findViewById(R.id.pizza)
+            R.array.sizes -> findViewById(R.id.size)
+            R.array.borders -> findViewById(R.id.border)
+            else -> null
+        }
+        txt?.text = value
+        val fragment = this.supportFragmentManager.findFragmentByTag("selectModalFragment")
+        (fragment as BottomSheetDialogFragment).dismiss()
     }
 }

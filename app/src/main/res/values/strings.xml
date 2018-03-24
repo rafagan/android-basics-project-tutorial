@@ -24,6 +24,8 @@
     <string name="select_pizza">Selecione a pizza</string>
     <string name="select_size">Selecione o tamanho</string>
     <string name="select_border">Selecione a borda</string>
+    <string name="circle">Círculo</string>
+    <string name="select">Selecionar</string>
 
     <string-array name="pizzas">
         <item>Margherita</item>

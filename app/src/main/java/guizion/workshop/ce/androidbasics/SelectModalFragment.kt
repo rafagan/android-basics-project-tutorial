@@ -1,5 +1,6 @@
 package guizion.workshop.ce.androidbasics
 
+import android.content.Context
 import android.os.Bundle
 import android.view.ViewGroup
 import android.view.LayoutInflater
@@ -11,6 +12,7 @@ import android.view.View
 
 class SelectModalFragment : BottomSheetDialogFragment() {
     lateinit var list: Array<out String>
+    val adapter: SelectModalAdapter = SelectModalAdapter()
 
     override fun onCreateView(inflater: LayoutInflater?,
                               container: ViewGroup?,
@@ -20,14 +22,20 @@ class SelectModalFragment : BottomSheetDialogFragment() {
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        list = resources.getStringArray(arguments.getInt("type"))
+        val type = arguments.getInt("type")
+        list = resources.getStringArray(type)
 
         val layoutManager = LinearLayoutManager(this.context, LinearLayoutManager.VERTICAL, false)
         val recView = view!!.findViewById<RecyclerView>(R.id.select_modal_list)!!
         recView.layoutManager = layoutManager
 
-        val adapter = SelectModalAdapter()
+        adapter.type = type
         adapter.data = list
         recView.adapter = adapter
+    }
+
+    override fun onAttach(context: Context?) {
+        super.onAttach(context)
+        adapter.listener = context as SelectInModalListener
     }
 }
