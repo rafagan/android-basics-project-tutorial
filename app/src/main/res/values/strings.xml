@@ -20,6 +20,7 @@
     <string name="pizza_size">Tamanho</string>
     <string name="pizza_border">Borda</string>
     <string name="pizza_image">Imagem da pizza</string>
+    <string name="content">content</string>
 
     <string-array name="pizzas">
         <item>Margherita</item>
