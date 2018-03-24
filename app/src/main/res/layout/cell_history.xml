@@ -38,14 +38,13 @@
             android:text="@string/pizza_border" />
     </LinearLayout>
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/img_pizza"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@drawable/ic_dashboard"
         android:layout_gravity="center"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
-        android:contentDescription="@string/pizza_image"/>
+        android:contentDescription="@string/pizza_image" />
 
 </LinearLayout>

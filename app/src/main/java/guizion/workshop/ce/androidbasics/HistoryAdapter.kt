@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.view.LayoutInflater
 import android.widget.ImageView
 import android.widget.TextView
+import de.hdodenhof.circleimageview.CircleImageView
 
 
 class HistoryAdapter: RecyclerView.Adapter<HistoryAdapter.HistoryHolder>() {
@@ -32,7 +33,7 @@ class HistoryAdapter: RecyclerView.Adapter<HistoryAdapter.HistoryHolder>() {
         private val name = itemView.findViewById<TextView>(R.id.txt_pizza_name)!!
         private val size = itemView.findViewById<TextView>(R.id.txt_pizza_size)!!
         private val border = itemView.findViewById<TextView>(R.id.txt_pizza_border)!!
-        private val image = itemView.findViewById<ImageView>(R.id.img_pizza)!!
+        private val image = itemView.findViewById<CircleImageView>(R.id.img_pizza)!!
 
         fun bind(current: HashMap<String, String>) {
             name.text = current["name"] ?: ""
