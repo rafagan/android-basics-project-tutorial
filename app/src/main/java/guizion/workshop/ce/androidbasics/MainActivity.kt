@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import android.support.design.widget.NavigationView
 import android.support.v4.widget.DrawerLayout
+import android.support.v7.app.ActionBarDrawerToggle
+import android.support.v7.widget.Toolbar
 import android.view.View
 import android.widget.TextView
 
@@ -18,14 +20,20 @@ class MainActivity: AppCompatActivity(), SelectInModalListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
 
         val navigationView = findViewById<NavigationView>(R.id.navigation_view)
         navigationView.setNavigationItemSelectedListener({ menuItem ->
-            val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
             drawerLayout.closeDrawers()
             onNavDrawerItemSelected(menuItem)
             true
         })
+
+        val toolbar = findViewById<Toolbar>(R.id.toolbar_home)
+        val drawerToggle = object : ActionBarDrawerToggle(
+                this, drawerLayout, toolbar, R.string.open_drawer, R.string.close_drawer) { }
+        drawerLayout.addDrawerListener(drawerToggle)
+        drawerToggle.syncState()
     }
 
     override fun onResume() {

@@ -1,8 +1,11 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
+    <include layout="@layout/toolbar_home"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -43,7 +46,7 @@
                 android:text="@string/select_pizza"
                 android:onClick="showPizzas"
                 android:textSize="@dimen/home_font_small"
-                android:textColor="@color/home_font_color"
+                android:textColor="@color/homeFontColor"
                 android:layout_marginTop="34dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginEnd="20dp" />
@@ -54,7 +57,7 @@
                 android:text="@string/select"
                 android:onClick="showPizzas"
                 android:textSize="@dimen/home_font_big"
-                android:textColor="@color/home_font_color"
+                android:textColor="@color/homeFontColor"
                 android:layout_marginRight="20dp"
                 android:layout_marginEnd="20dp" />
             <View
@@ -69,7 +72,7 @@
                 android:text="@string/select_size"
                 android:onClick="showPizzas"
                 android:textSize="@dimen/home_font_small"
-                android:textColor="@color/home_font_color"
+                android:textColor="@color/homeFontColor"
                 android:layout_marginTop="19dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginEnd="20dp" />
@@ -80,7 +83,7 @@
                 android:text="@string/select"
                 android:onClick="showSizes"
                 android:textSize="@dimen/home_font_big"
-                android:textColor="@color/home_font_color"
+                android:textColor="@color/homeFontColor"
                 android:layout_marginRight="20dp"
                 android:layout_marginEnd="20dp" />
             <View
@@ -95,7 +98,7 @@
                 android:text="@string/select_border"
                 android:onClick="showPizzas"
                 android:textSize="@dimen/home_font_small"
-                android:textColor="@color/home_font_color"
+                android:textColor="@color/homeFontColor"
                 android:layout_marginTop="19dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginEnd="20dp" />
@@ -106,7 +109,7 @@
                 android:text="@string/select"
                 android:onClick="showBorders"
                 android:textSize="@dimen/home_font_big"
-                android:textColor="@color/home_font_color"
+                android:textColor="@color/homeFontColor"
                 android:layout_marginRight="20dp"
                 android:layout_marginEnd="20dp" />
             <View
@@ -127,5 +130,5 @@
         android:layout_gravity="bottom|end"
         android:layout_marginRight="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="68dp" />
+        android:layout_marginBottom="20dp" />
 </FrameLayout>

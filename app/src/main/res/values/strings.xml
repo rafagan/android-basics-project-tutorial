@@ -26,6 +26,8 @@
     <string name="select_border">Selecione a borda</string>
     <string name="circle">Círculo</string>
     <string name="select">Selecionar</string>
+    <string name="open_drawer">Abrir menu</string>
+    <string name="close_drawer">Fechar menu</string>
 
     <string-array name="pizzas">
         <item>Margherita</item>
