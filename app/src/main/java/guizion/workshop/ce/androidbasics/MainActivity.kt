@@ -29,7 +29,7 @@ class MainActivity: AppCompatActivity(), SelectInModalListener {
             true
         })
 
-        val toolbar = findViewById<Toolbar>(R.id.toolbar_home)
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
         val drawerToggle = object : ActionBarDrawerToggle(
                 this, drawerLayout, toolbar, R.string.open_drawer, R.string.close_drawer) { }
         drawerLayout.addDrawerListener(drawerToggle)
