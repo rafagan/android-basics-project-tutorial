@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginTop="-20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:layout_above="@+id/btn_complete_tutorial"
+        app:ci_drawable="@drawable/vector_circle_tutorial"/>
+
+    <Button
+        android:id="@+id/btn_complete_tutorial"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="@string/tutorial_button"
+        android:textColor="#e33d72"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_marginBottom="19dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_tutorial_button"
+        android:onClick="onCompleteTutorial" />
+
+</RelativeLayout>

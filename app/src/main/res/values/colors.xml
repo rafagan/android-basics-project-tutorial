@@ -6,4 +6,5 @@
     <color name="gray">#92aebf</color>
     <color name="homeFontColor">#4e4e4e</color>
     <color name="white">#FFFFFF</color>
+    <color name="transparent">#00ffff</color>
 </resources>

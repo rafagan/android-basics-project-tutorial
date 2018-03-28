@@ -28,6 +28,19 @@
     <string name="select">Selecionar</string>
     <string name="open_drawer">Abrir menu</string>
     <string name="close_drawer">Fechar menu</string>
+    <string name="tutorial_title_1">Título 1</string>
+    <string name="tutorial_title_2">Título 2</string>
+    <string name="tutorial_title_3">Título 3</string>
+    <string name="tutorial_subtitle_1">Subtítulo 1</string>
+    <string name="tutorial_subtitle_2">Subtítulo 2</string>
+    <string name="tutorial_subtitle_3">Subtítulo 3</string>
+    <string name="tutorial_desc_1">Descrição 1 Descrição 1 Descrição 1 Descrição 1 Descrição 1 V Descrição 1 Descrição 1 Descrição 1 Descrição 1</string>
+    <string name="tutorial_desc_2">Descrição 2</string>
+    <string name="tutorial_desc_3">Descrição 3</string>
+    <string name="tutorial_image_1">Tutorial imagem 1</string>
+    <string name="tutorial_image_2">Tutorial imagem 2</string>
+    <string name="tutorial_image_3">Tutorial imagem 3</string>
+    <string name="tutorial_button">Comece agora</string>
 
     <string-array name="pizzas">
         <item>Margherita</item>
