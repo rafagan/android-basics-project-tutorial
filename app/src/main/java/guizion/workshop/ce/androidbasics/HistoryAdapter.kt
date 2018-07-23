@@ -15,13 +15,13 @@ class HistoryAdapter: RecyclerView.Adapter<HistoryAdapter.HistoryHolder>() {
             hashMapOf("name" to "Romeu e Julieta", "size" to "Brotinho", "border" to "Chocolate", "image" to "p_milho"),
             hashMapOf("name" to "Milho", "size" to "Gigante", "border" to "Sem borda", "image" to "p_romeu_julieta"))
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): HistoryHolder {
-        val itemView = LayoutInflater.from(parent?.context).inflate(R.layout.cell_history, parent, false)
-        return HistoryHolder(itemView)
-    }
-
     override fun getItemCount(): Int {
         return items.size
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HistoryHolder {
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.cell_history, parent, false)
+        return HistoryHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: HistoryHolder, position: Int) {
